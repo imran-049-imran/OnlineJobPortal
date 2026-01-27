@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/jobPortal
+    username: root
+    password: root@123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: f9A7xQ2mL@8ZP!r6K#VwT3JdC1E$yH0N%S
+  expiration-ms: 86400000
