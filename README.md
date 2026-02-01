@@ -1,78 +1,106 @@
-# Online Job Portal – Backend (Spring Boot)
+💼 Online Job Portal – Backend API
 
-A secure and scalable **Online Job Portal Backend** built using **Spring Boot**, **JWT Authentication**, and **MySQL**.  
-This backend provides REST APIs for **Users, Jobs, Applications, and Admin Management**.
+Spring Boot | JWT | MySQL
 
-## Tech Stack
+A secure, scalable, and production-ready Online Job Portal Backend built using Spring Boot, Spring Security (JWT), and MySQL.
+This backend exposes RESTful APIs for User Management, Job Posting, Job Applications, and Admin Operations, following clean architecture and industry best practices.
 
-- **Java** 17
-- **Spring Boot** 3.x
-- **Spring Security + JWT**
-- **Spring Data JPA (Hibernate)**
-- **MySQL**
-- **Maven**
-- **Swagger / OpenAPI**
-- **Lombok**
+🚀 Tech Stack
 
----
+Java 17
 
-##  Project Structure
+Spring Boot 3.x
 
+Spring Security + JWT
+
+Spring Data JPA (Hibernate)
+
+MySQL
+
+Maven
+
+Swagger / OpenAPI
+
+Lombok
+
+📁 Project Structure (Layered Architecture)
 ```
 backend/
 ├── src/main/java/com/jobportal
-│ ├── controller # REST Controllers
-│ ├── service # Business Logic
-│ ├── repository # JPA Repositories
-│ ├── model # Entities
-│ ├── dto # DTOs
-│ ├── security # JWT & Security Config
-│ ├── exception # Global Exception Handling
-│ └── JobPortalApplication.java
+│   ├── controller     # REST Controllers
+│   ├── service        # Business Logic
+│   ├── repository     # JPA Repositories
+│   ├── model          # Entity Classes
+│   ├── dto            # Data Transfer Objects
+│   ├── security       # JWT & Spring Security Config
+│   ├── exception      # Global Exception Handling
+│   └── JobPortalApplication.java
 │
 ├── src/main/resources
-│ ├── application.properties
-│ └── data.sql
+│   ├── application.properties
+│   └── data.sql
 │
 ├── pom.xml
 └── README.md
 ```
 
----
+✨ Features
+🔐 Authentication & Authorization
 
-##  Features
+User Registration & Login
 
-###  Authentication & Authorization
-- User Registration & Login
-- JWT-based Authentication
-- Role-based Access Control (`ADMIN`, `USER`)
+JWT-based authentication
 
-### Job Management
-- Create, Update, Delete Jobs (Admin)
-- View Jobs (Public/User)
-- Filter jobs by title, location, company
+Role-based access control:
 
-### Job Applications
-- Apply for jobs (User)
-- View applied jobs
-- Admin can view all applications
+ADMIN
 
-### Security
-- Spring Security with JWT
-- Protected APIs using roles
-- Password encryption using BCrypt
+USER
 
-### 📘 API Documentation
-- Swagger UI integrated for API testing
+Secure APIs using Spring Security
 
----
+Password encryption using BCrypt
 
-## ⚙️ Configuration
+💼 Job Management
 
-### 🔧 application.properties
+Create, Update, Delete jobs (Admin only)
 
-```
-properties
+View all available jobs (Public / User)
+
+Filter jobs by:
+
+Job Title
+
+Location
+
+Company
+
+📝 Job Applications
+
+Users can apply for jobs
+
+View applied jobs (User-specific)
+
+Admin can view all job applications
+
+🛡️ Security Highlights
+
+Stateless authentication using JWT
+
+Protected endpoints with role-based access
+
+Centralized exception handling
+
+Clean separation of concerns
+
+📘 API Documentation
+
+Swagger UI integrated
+
+All APIs documented and testable from browser
+
+⚙️ Configuration
+🔧 application.properties
 server.port=8080
 
 spring.datasource.url=jdbc:mysql://localhost:3306/job_portal_db
@@ -84,12 +112,12 @@ spring.jpa.show-sql=true
 
 jwt.secret=your_jwt_secret_key
 jwt.expiration=86400000
-```
-#  Database
 
-MySQL Database Name: job_portal_db
+🗄️ Database Design
 
-Tables:
+Database Name: job_portal_db
+
+Tables
 
 users
 
@@ -99,55 +127,61 @@ jobs
 
 applications
 
-▶️ Run the Project
-1️⃣ Clone Repository
+Relationships
+
+User ↔ Applications (One-to-Many)
+
+Job ↔ Applications (One-to-Many)
+
+User ↔ Roles (Many-to-Many)
+
+▶️ How to Run the Project
+1️⃣ Clone the Repository
 git clone https://github.com/imran-049-imran/OnlineJobPortal.git
 cd OnlineJobPortal/backend
 
-2️⃣ Build Project
+2️⃣ Build the Project
 mvn clean install
 
-3️⃣ Run Application
+3️⃣ Run the Application
 mvn spring-boot:run
 
-📌 API Endpoints (Sample)
-🔑 Auth
-
+📌 Sample API Endpoints
+🔑 Authentication
 POST /api/auth/register
-
 POST /api/auth/login
 
 💼 Jobs
-
-GET /api/jobs
-
-POST /api/admin/jobs
-
+GET    /api/jobs
+POST   /api/admin/jobs
 DELETE /api/admin/jobs/{id}
 
 📝 Applications
-
 POST /api/applications/apply
-
-GET /api/admin/applications
+GET  /api/admin/applications
 
 📘 Swagger UI
 
-After running the project, open:
+After running the application, open:
 
 http://localhost:8080/swagger-ui.html
 
+
+Use Swagger to test all secured and public APIs.
+
 🎯 Future Enhancements
 
-Resume Upload
+Resume upload (PDF/DOC)
 
-Email Notifications
+Email notifications (Application status)
 
-Admin Analytics Dashboard
+Admin analytics dashboard
 
-Pagination & Sorting
+Pagination & sorting
 
-Cloud Deployment (AWS)
+Cloud deployment (AWS / Docker)
+
+Search optimization
 
 👨‍💻 Author
 
@@ -155,7 +189,3 @@ Imran
 Java | Spring Boot | Full Stack Developer
 
 🔗 GitHub: https://github.com/imran-049-imran
-
-⭐ Support
-
-If you like this project, please ⭐ the repository!
