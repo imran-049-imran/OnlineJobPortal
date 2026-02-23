@@ -1,11 +1,11 @@
-💼 Online Job Portal – Backend API
+# Online Job Portal – Backend API
 
-Spring Boot | JWT | MySQL
+# Spring Boot | JWT | MySQL
 
 A secure, scalable, and production-ready Online Job Portal Backend built using Spring Boot, Spring Security (JWT), and MySQL.
 This backend exposes RESTful APIs for User Management, Job Posting, Job Applications, and Admin Operations, following clean architecture and industry best practices.
 
-🚀 Tech Stack
+# Tech Stack
 
 Java 17
 
