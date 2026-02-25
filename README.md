@@ -75,7 +75,7 @@ Location
 
 Company
 
-📝 Job Applications
+#Job Applications
 
 Users can apply for jobs
 
@@ -83,7 +83,7 @@ View applied jobs (User-specific)
 
 Admin can view all job applications
 
-🛡️ Security Highlights
+# Security Highlights
 
 Stateless authentication using JWT
 
@@ -93,13 +93,13 @@ Centralized exception handling
 
 Clean separation of concerns
 
-📘 API Documentation
+# API Documentation
 
 Swagger UI integrated
 
 All APIs documented and testable from browser
 
-⚙️ Configuration
+# Configuration
 🔧 application.properties
 server.port=8080
 
